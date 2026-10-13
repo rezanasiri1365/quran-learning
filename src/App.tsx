@@ -13,7 +13,7 @@ function App() {
   /*const [count, setCount] = useState(0)*/
 
   return (
-    <BrowserRouter >
+<BrowserRouter basename="/quran-learning">
     <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />}/> 
