@@ -6,17 +6,16 @@ function Home() {
   return (
      <div className="home-page">
   
-      <CourseRegistrationSlider />
-
       <main className="home-page">
 
         <section className="quran-hero">
         <img src={import.meta.env.BASE_URL+'images/courses/main-banner.jpeg'} alt='بنر اصلی آموزش قران '   className="quran-hero-image" />
           <div className="quran-hero-content">
             
-          <p className="hero-eyebrow">به نام خداوند بخشنده مهربان</p>
             <h1 className="hero-title">
-            <span>آینده فرزندانتان را با</span>
+           <span className="hero-line">
+            <span className="hero-highlight">آینده فرزندانتان</span> با
+          </span>
             <span>قران بسازید</span>
           </h1>
            <p className="hero-description">
@@ -104,6 +103,9 @@ function Home() {
         </section>
              
       </main>
+      
+      <CourseRegistrationSlider />
+
                  </div>
   );
 }
