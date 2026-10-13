@@ -8,25 +8,44 @@ function Home() {
   
       <CourseRegistrationSlider />
 
-      <main>
+      <main className="home-page">
 
-        <section className="hero">
-
-          <div className="hero-content">
-             <h1>
-              آموزش قرآن
-              <br />
-              قدم به قدم
-            </h1>
-
-            <p>
-              یادگیری قرآن کریم با استفاده از
-              درس‌های آموزشی، تمرین و برنامه آموزشی
-            </p>
-             <button className="start-button">
-              شروع یادگیری
-            </button>
-           
+        <section className="quran-hero">
+        <img src={import.meta.env.BASE_URL+'images/courses/main-banner.jpeg'} alt='بنر اصلی آموزش قران '   className="quran-hero-image" />
+          <div className="quran-hero-content">
+            
+          <p className="hero-eyebrow">به نام خداوند بخشنده مهربان</p>
+            <h1 className="hero-title">
+            <span>آینده فرزندانتان را با</span>
+            <span>قران بسازید</span>
+          </h1>
+           <p className="hero-description">
+            <span>
+              ما در آموزشگاه .... قرآن را با زبانی کودکانه وروشی جذاب به فرزند
+            </span>
+            <span>
+              شما آموزش میدهیم تا باعشق یاد بگیرد وماندگار شود
+            </span>
+             
+          </p>
+             <div className="hero-features">
+              <div className="hero-feature">
+                 <span className="feature-icon">🌸</span>
+              <span>ویژه کودکان ۵ تا ۱۲ سال</span>
+              </div>
+             </div>
+               <div className="hero-feature">
+              <span className="feature-icon">🕌</span>
+              <span>کلاس‌های حضوری و آنلاین</span>
+            </div>
+             <div className="hero-feature">
+              <span className="feature-icon">📖</span>
+              <span>مربیان تخصصی حفظ کودک</span>
+            </div>
+              <div className="hero-feature">
+              <span className="feature-icon">🌱</span>
+              <span>گزارش پیشرفت برای والدین</span>
+            </div>
           </div>
 
         </section>

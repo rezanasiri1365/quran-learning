@@ -197,3 +197,159 @@
 
   cursor: pointer;
 }
+
+/* صفحه اصلی */
+.home-page {
+  width: 100%;
+  direction: rtl;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* قاب بنر */
+.quran-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 430px;
+  margin: 0 auto 35px;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
+  background: #f8fcfa;
+  box-shadow: 0 8px 25px rgba(16, 100, 92, 0.12);
+}
+
+/* تصویر اصلی */
+.quran-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* محتوای سمت راست بنر */
+.quran-hero-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 52%;
+  min-height: 430px;
+  padding: 38px 42px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #155b55;
+}
+
+/* عبارت ابتدایی */
+.hero-eyebrow {
+  margin: 0 0 14px;
+  color: #168c80;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* عنوان چهارخطی */
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.hero-title span:first-child {
+  color: #155b55;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 800;
+}
+
+.hero-title span:last-child {
+  color: #159b8e;
+  font-family: Georgia, serif;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 700;
+}
+
+/* توضیحات */
+.hero-description {
+  max-width: 520px;
+  margin: 0 0 24px;
+  color: #496b66;
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+/* ویژگی‌ها */
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 540px;
+}
+
+/* هر ویژگی غیرقابل کلیک */
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(21, 155, 142, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #276b63;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+/* نمایش در موبایل */
+@media (max-width: 768px) {
+  .quran-hero {
+    min-height: auto;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .quran-hero-image {
+    object-position: center;
+    opacity: 0.2;
+  }
+
+  .quran-hero-content {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 20px;
+    align-items: stretch;
+    background: rgba(248, 252, 250, 0.88);
+  }
+
+  .hero-title span:first-child {
+    font-size: 27px;
+  }
+
+  .hero-title span:last-child {
+    font-size: 22px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-features {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
