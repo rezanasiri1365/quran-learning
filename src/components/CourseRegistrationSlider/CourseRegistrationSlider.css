@@ -1,0 +1,342 @@
+/*
+.registration-slider {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  direction: rtl;
+  background: #f8faf9;
+  border-radius: 14px;
+}
+
+.registration-slider h2 {
+  margin: 0 0 20px;
+  color: #14532d;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.registration-slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 5px 2px 18px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #86b99a #e5eee8;
+}
+
+.registration-course-card {
+  flex: 0 0 280px;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e5ebe7;
+  border-radius: 14px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.registration-course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.registration-course-card img {
+  display: block;
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  background: #e5eee8;
+}
+
+.registration-course-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 16px;
+}
+
+.registration-course-content h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.registration-course-content p {
+  margin: 0;
+  min-height: 42px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.registration-course-content span {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.registration-course-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 10px 14px;
+  background: #166534;
+  color: #fff;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.registration-course-content a:hover {
+  background: #14532d;
+}
+
+@media (max-width: 900px) {
+  .registration-slider {
+    padding: 20px;
+  }
+
+  .registration-course-card {
+    flex-basis: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .registration-slider {
+    padding: 16px 12px;
+  }
+
+  .registration-slider h2 {
+    font-size: 19px;
+  }
+
+  .registration-slider-track {
+    gap: 12px;
+  }
+
+  .registration-course-card {
+    flex-basis: 82%;
+  }
+
+  .registration-course-card img {
+    height: 150px;
+  }
+}*/
+.registration-slider {
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  direction: rtl;
+  background: #f8faf9;
+}
+
+.registration-slider h2 {
+  margin: 0 0 20px;
+  text-align: right;
+  color: #14532d;
+  font-size: 22px;
+}
+
+
+/* نوار افقی */
+
+.registration-slider-track {
+  display: flex;
+  flex-direction: row;
+
+  gap: 20px;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 5px 5px 20px;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: thin;
+}
+
+
+/* کارت */
+
+.registration-course-card {
+  flex: 0 0 280px;
+
+  width: 280px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+
+/* تصویر */
+
+.registration-course-card img {
+  display: block;
+
+  width: 100%;
+  height: 160px;
+
+  object-fit: cover;
+
+  background: #e5eee8;
+}
+
+
+/* محتوا */
+
+.registration-course-content {
+  padding: 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.registration-course-content h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #1f2937;
+}
+
+.registration-course-content p {
+  margin: 0;
+
+  min-height: 45px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #6b7280;
+}
+
+.registration-course-content span {
+  font-size: 12px;
+
+  color: #4b5563;
+}
+
+
+/* دکمه ثبت نام */
+
+.registration-course-content a {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  text-align: center;
+
+  background: #166534;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.registration-course-content a:hover {
+  background: #14532d;
+}
+
+
+/* موبایل */
+
+@media (max-width: 600px) {
+
+  .registration-slider {
+    padding: 16px 12px;
+  }
+
+  .registration-course-card {
+    flex: 0 0 82%;
+    width: 82%;
+  }
+
+}
+.registration-slider-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* دکمه‌های چپ و راست */
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #166534;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow:hover {
+  background: #14532d;
+}
+
+.slider-arrow-left {
+  left: 5px;
+}
+
+.slider-arrow-right {
+  right: 5px;
+}
