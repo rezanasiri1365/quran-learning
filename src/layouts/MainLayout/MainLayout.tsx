@@ -6,7 +6,7 @@ return (
     <div className="app-layout" dir="rtl" >
               <header className="main-header">
                         <div className="header-container">
-                              <Link to="/" className="logo"> آموزش قرآن          </Link>
+                              <Link to="/" className="logo"> آموزش قرآن</Link>
            <nav className="main-nav">
 
             <Link to="/">

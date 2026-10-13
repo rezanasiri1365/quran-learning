@@ -16,7 +16,7 @@ const _cources:Cource[]=[
       {
     id: 1,
     title: "آموزش روخوانی قرآن",
-    image: "/images/courses/pic1.jpeg",
+    image:  '${import.meta.env.BASE_URL}images/courses/pic1.jpeg',
     description: "آموزش صحیح روخوانی و روان‌خوانی قرآن کریم",
     startDate: "1405/07/15",
     registrationEndDate: "1405/07/10",
@@ -25,7 +25,7 @@ const _cources:Cource[]=[
    {
     id: 2,
     title: "آموزش تجوید",
-    image: "/images/courses/pic2.jpeg",
+    image: '${import.meta.env.BASE_URL}images/courses/pic2.jpeg',
     description: "آموزش قواعد و مهارت‌های تجوید قرآن کریم",
     startDate: "1405/07/20",
     registrationEndDate: "1405/07/15",
@@ -34,7 +34,7 @@ const _cources:Cource[]=[
   {
     id: 3,
     title: "حفظ قرآن کریم",
-    image: "/images/courses/pic3.jpeg",
+    image: '${import.meta.env.BASE_URL}images/courses/pic3.jpeg',
     description: "دوره برنامه‌ریزی شده برای حفظ سوره‌های قرآن",
     startDate: "1405/08/01",
     registrationEndDate: "1405/07/25",
@@ -43,7 +43,7 @@ const _cources:Cource[]=[
   {
     id: 4,
     title: "حفظ قرآن کریم",
-    image: "/images/courses/pic3.jpeg",
+    image: '${import.meta.env.BASE_URL}images/courses/pic1.jpeg',
     description: "دوره برنامه‌ریزی شده برای حفظ سوره‌های قرآن",
     startDate: "1405/08/01",
     registrationEndDate: "1405/07/25",
@@ -52,7 +52,7 @@ const _cources:Cource[]=[
   {
     id: 5,
     title: "حفظ قرآن کریم",
-    image: "/images/courses/pic3.jpeg",
+    image: '${import.meta.env.BASE_URL}images/courses/pic2.jpeg',
     description: "دوره برنامه‌ریزی شده برای حفظ سوره‌های قرآن",
     startDate: "1405/08/01",
     registrationEndDate: "1405/07/25",
@@ -61,7 +61,7 @@ const _cources:Cource[]=[
   {
     id: 6,
     title: "حفظ قرآن کریم",
-    image: "/images/courses/pic3.jpeg",
+    image: '${import.meta.env.BASE_URL}images/courses/pic3.jpeg',
     description: "دوره برنامه‌ریزی شده برای حفظ سوره‌های قرآن",
     startDate: "1405/08/01",
     registrationEndDate: "1405/07/25",
