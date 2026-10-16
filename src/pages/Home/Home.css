@@ -17,6 +17,21 @@
 
   border-bottom: 1px solid #e5e7eb;
 }
+.quran-hero::before {
+   content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    rgba(10, 43, 34, 0.92) 0%,
+    rgba(10, 43, 34, 0.70) 45%,
+    rgba(10, 43, 34, 0.12) 100%
+  );
+}
 
 .logo {
   font-size: 22px;
@@ -208,40 +223,51 @@
 /* قاب بنر */
 .quran-hero {
   position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   width: 100%;
-  max-width: 1440px;
-  min-height: 430px;
-  margin: 0 auto 35px;
+  min-height: 500px;
+  padding: 45px 5%;
+
+  box-sizing: border-box;
   overflow: hidden;
-  border-radius: 0 0 24px 24px;
-  background: #f8fcfa;
-  box-shadow: 0 8px 25px rgba(16, 100, 92, 0.12);
+  border-radius: 20px;
+  direction: rtl;
+
+  background: #174b3d;
 }
 
 /* تصویر اصلی */
 .quran-hero-image {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  object-position: center;
+  object-position: center 10%;
+
+  z-index: 0;
 }
 
 /* محتوای سمت راست بنر */
 .quran-hero-content {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  width: 52%;
-  min-height: 430px;
-  padding: 38px 42px;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  color: #155b55;
+   position: relative;
+  z-index: 2;
+  width: 65%;
+  max-width: 760px;
+  margin-right: 0;
+  margin-left: auto;
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #fff;
 }
 
 /* عبارت ابتدایی */
@@ -255,11 +281,14 @@
 
 /* عنوان چهارخطی */
 .hero-title {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0 0 16px;
-  line-height: 1.7;
+  margin: 0 0 22px;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(34px, 3.6vw, 50px);
+  font-weight: 900;
+  line-height: 1.9;
+  letter-spacing: -1.2px;
+  color: #fff;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
 }
 
 .hero-title span:first-child {
@@ -279,69 +308,36 @@
 
 /* ویژگی‌ها */
 .hero-features {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  width: 100%;
-  max-width: 540px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
 }
 
 /* هر ویژگی غیرقابل کلیک */
 .hero-feature {
   display: flex;
   align-items: center;
-  gap: 9px;
-  min-height: 44px;
-  padding: 8px 10px;
-  box-sizing: border-box;
-  border: 1px solid rgba(21, 155, 142, 0.2);
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.88);
-  color: #276b63;
+  background: rgba(13, 55, 43, 0.78);
+  color: #fff;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.8;
+  white-space: nowrap;
+  backdrop-filter: blur(5px);
 }
 
 .feature-icon {
   flex-shrink: 0;
-  font-size: 20px;
+  font-size: 17px;
 }
 
-/* نمایش در موبایل */
-@media (max-width: 768px) {
-  .quran-hero {
-    min-height: auto;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .quran-hero-image {
-    object-position: center;
-    opacity: 0.2;
-  }
-
-  .quran-hero-content {
-    width: 100%;
-    min-height: auto;
-    padding: 30px 20px;
-    align-items: stretch;
-    background: rgba(248, 252, 250, 0.88);
-  }
-
-  .hero-title span:first-child {
-    font-size: 27px;
-  }
-
-  .hero-title span:last-child {
-    font-size: 22px;
-  }
-
-
-  .hero-features {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-}
 .hero-line {
   display: block;
   width: 100%;
@@ -352,20 +348,22 @@
   line-height: 2;
   color: #333333;
 }
-
-.hero-highlight {
-  color: #159b8e;
-  font-weight: 700;
-}
-
+.hero-line,
 .hero-title-line {
   display: block;
-  width: 100%;
-  direction: rtl;
-  text-align: right;
-  font-size: 32px;
+}
+
+.hero-highlight {
+  color: #f4d995;
   font-weight: 700;
-  line-height: 1.8;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+
+}
+
+.hero-black {
+  color: #fff;
+  font-weight: 800;
 }
 
 .hero-title-line .hero-highlight {
@@ -377,17 +375,19 @@
 }
 
 .hero-description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  direction: rtl;
-  text-align: right;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2.2;
-  color: #555555;
-  margin-top: 8px;
+   margin: 0 0 28px;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 2.3;
+  letter-spacing: -0.2px;
+  color: #f4f7f5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero-description span {
+   display: block;
+
 }
 
 .hero-description span {
@@ -396,20 +396,84 @@
   text-align: right;
 }
 
-.hero-description span {
-  display: block;
-  width: 100%;
-  text-align: right;
+
+/* نمایش در موبایل */
+@media (max-width: 768px) {
+  .quran-hero-content {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(27px, 5.5vw, 36px);
+    line-height: 1.9;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 2.2;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+  }
+
+  .hero-feature {
+    white-space: normal;
+  }
 }
-.quran-hero-image {
-  object-fit: contain;
-  background-color: #f8fcfa;
-  transform: translate(-50%,-50%);
-  position: absolute;
-  top:50%;
-  left:50%;
-  width: 85%;;
-  height: 85%;
-  object-fit: contain;
-  object-position: center;
+
+@media (max-width: 900px) {
+  .quran-hero {
+    min-height: 460px;
+    padding: 35px 4%;
+  }
+
+  .quran-hero-content {
+    width: 75%;
+  }
+
+  .hero-features {
+    gap: 6px;
+  }
+
+  .hero-feature {
+    gap: 4px;
+    padding: 9px 4px;
+    font-size: 10px;
+  }
+
+  .feature-icon {
+    font-size: 16px;
+  }
 }
+
+@media (max-width: 600px) {
+  .quran-hero {
+    min-height: 460px;
+    padding: 30px 16px;
+  }
+
+  .quran-hero-content {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .quran-hero-image {
+    height: 190px;
+  }
+
+  .quran-hero-content {
+    padding: 18px 12px;
+  }
+
+  .hero-title-line {
+    font-size: 24px;
+  }
+
+  .hero-feature {
+    font-size: 11px;
+  }
+}
+

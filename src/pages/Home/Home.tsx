@@ -14,9 +14,12 @@ function Home() {
             
             <h1 className="hero-title">
            <span className="hero-line">
-            <span className="hero-highlight">آینده فرزندانتان</span> با
+            <span className="hero-highlight">آینده فرزندانتان</span> را با   
           </span>
-            <span>قران بسازید</span>
+           <span className="hero-title-line">
+            <span className="hero-highlight">قرآن</span>{' '}
+            <span className="hero-black">بسازید</span>
+            </span>
           </h1>
            <p className="hero-description">
             <span>
@@ -27,24 +30,27 @@ function Home() {
             </span>
              
           </p>
-             <div className="hero-features">
+           <div className="hero-features">
               <div className="hero-feature">
                  <span className="feature-icon">🌸</span>
-              <span>ویژه کودکان ۵ تا ۱۲ سال</span>
-              </div>
+                   <span>ویژه کودکان ۵ تا ۱۲ سال</span>
              </div>
-               <div className="hero-feature">
-              <span className="feature-icon">🕌</span>
-              <span>کلاس‌های حضوری و آنلاین</span>
-            </div>
-             <div className="hero-feature">
-              <span className="feature-icon">📖</span>
-              <span>مربیان تخصصی حفظ کودک</span>
-            </div>
-              <div className="hero-feature">
-              <span className="feature-icon">🌱</span>
-              <span>گزارش پیشرفت برای والدین</span>
-            </div>
+
+      <div className="hero-feature">
+        <span className="feature-icon">🕌</span>
+        <span>کلاس‌های حضوری و آنلاین</span>
+      </div>
+
+      <div className="hero-feature">
+        <span className="feature-icon">📖</span>
+        <span>مربیان تخصصی حفظ کودک</span>
+      </div>
+
+      <div className="hero-feature">
+        <span className="feature-icon">🌱</span>
+        <span>گزارش پیشرفت برای والدین</span>
+      </div>
+           </div>
           </div>
 
         </section>
