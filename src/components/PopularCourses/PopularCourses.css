@@ -1,0 +1,226 @@
+
+.popular-courses {
+  padding: 55px 5%;
+  background: #f7faf7;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+
+.popular-courses-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.popular-courses-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular-courses-eyebrow {
+   display: inline-block;
+  margin-bottom: 8px;
+  color: #a88642;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.popular-courses-header h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  color: #174b3d;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 900;
+  line-height: 1.8;
+  letter-spacing: -0.8px;
+}
+.popular-courses-header h2 {
+  padding-bottom: 10px;
+}
+
+.popular-courses-header h2::after {
+  /* نقش سمت چپ عنوان در چیدمان راست‌به‌چپ */
+  transform: rotate(0deg);
+}
+.popular-courses-header h2::before,
+.popular-courses-header h2::after {
+  content: "۞";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #b7964b;
+  font-family: Tahoma, sans-serif;
+  font-size: 29px;
+  font-weight: 400;
+  text-shadow: 0 2px 5px rgba(183, 150, 75, 0.15);
+}
+.popular-courses-header p {
+  margin: 4px 0 0;
+  color: #718078;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+}
+.popular-courses-controls {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: flex;
+  gap: 8px;
+  transform: translateY(-50%);
+}
+
+.popular-courses-controls button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d9e5dc;
+  border-radius: 50%;
+  background: #fff;
+  color: #174b3d;
+  font-size: 16px;
+  cursor: pointer;
+  transition:  0.2s ease, color 0.2s ease;
+}
+
+.popular-courses-controls button:hover {
+  background: #174b3d;
+  color: #fff;
+}
+
+.popular-courses-controls button:hover {
+  background: #174b3d;
+  color: #fff;
+}
+
+.popular-courses-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 5px 2px 18px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #c6d8ca transparent;
+}
+
+.popular-course-card {
+  flex: 0 0 calc((100% - 44px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e7eee8;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(25, 65, 47, 0.06);
+  scroll-snap-align: start;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.popular-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(25, 65, 47, 0.12);
+}
+
+.popular-course-image-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #e8f0e9;
+}
+
+.popular-course-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.popular-course-card:hover .popular-course-image {
+  transform: scale(1.04);
+}
+
+.popular-course-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(23, 75, 61, 0.92);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.popular-course-body {
+  padding: 20px;
+}
+
+.popular-course-body h3 {
+  margin: 0 0 10px;
+  color: #174b3d;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.popular-course-body p {
+  min-height: 52px;
+  margin: 0 0 18px;
+  color: #68776f;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.popular-course-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #edf1ed;
+  color: #24765a;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.popular-course-link span {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .popular-courses-header {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .popular-courses-header h2 {
+    gap: 12px;
+    font-size: 25px;
+  }
+
+  .popular-courses-header h2::before,
+  .popular-courses-header h2::after {
+    font-size: 23px;
+  }
+
+  .popular-courses-header p {
+    font-size: 12px;
+  }
+
+  .popular-courses-controls {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+  }
+}

@@ -1,6 +1,8 @@
 
 import CourseRegistrationSlider from "../../components/CourseRegistrationSlider/CourseRegistrationSlider";
 import "./Home.css";
+import PopularCourses from "../../components/PopularCourses/PopularCourses";
+import QuranStats from "../../components/QuranStats/QuranStats";
 
 function Home() {
   return (
@@ -15,7 +17,7 @@ function Home() {
             <h1 className="hero-title">
            <span className="hero-line">
             <span className="hero-highlight">آینده فرزندانتان</span> را با   
-          </span>
+           </span>
            <span className="hero-title-line">
             <span className="hero-highlight">قرآن</span>{' '}
             <span className="hero-black">بسازید</span>
@@ -54,6 +56,13 @@ function Home() {
           </div>
 
         </section>
+         
+          <PopularCourses />
+         
+         
+          <QuranStats />
+         
+
          <section className="courses-section">
 
           <h2>
