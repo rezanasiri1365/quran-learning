@@ -131,7 +131,19 @@
   margin: 0;
   font-size: 14px;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
 
+.logo-image {
+  display: block;
+  width: 150px;
+  height: 65px;
+  object-fit: contain;
+}
 
 /* Responsive */
 

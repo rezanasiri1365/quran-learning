@@ -6,7 +6,11 @@ return (
     <div className="app-layout" dir="rtl" >
               <header className="main-header">
                         <div className="header-container">
-                              <Link to="/" className="logo"> آموزش قرآن</Link>
+                          
+          <Link to="/login" className="login-link">
+            ثبت نام/ورود
+          </Link>
+                             
            <nav className="main-nav">
 
             <Link to="/">
@@ -26,10 +30,9 @@ return (
             </Link>
 
           </nav>
-
-          <Link to="/login" className="login-link">
-            ورود
-          </Link>
+         <a href={import.meta.env.BASE_URL} className="logo">
+          <img    src={import.meta.env.BASE_URL+'images/logo.png'}    alt="لوگوی آموزش قرآن"    className="logo-image"  />
+          </a>
                         </div>
               </header>
               <main className="main-content">
