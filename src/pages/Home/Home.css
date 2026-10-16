@@ -276,14 +276,6 @@
   font-weight: 700;
 }
 
-/* توضیحات */
-.hero-description {
-  max-width: 520px;
-  margin: 0 0 24px;
-  color: #496b66;
-  font-size: 15px;
-  line-height: 2.1;
-}
 
 /* ویژگی‌ها */
 .hero-features {
@@ -344,9 +336,6 @@
     font-size: 22px;
   }
 
-  .hero-description {
-    font-size: 14px;
-  }
 
   .hero-features {
     grid-template-columns: 1fr;
@@ -411,4 +400,16 @@
   display: block;
   width: 100%;
   text-align: right;
+}
+.quran-hero-image {
+  object-fit: contain;
+  background-color: #f8fcfa;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 85%;;
+  height: 85%;
+  object-fit: contain;
+  object-position: center;
 }
